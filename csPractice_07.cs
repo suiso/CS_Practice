@@ -7,11 +7,40 @@ class Demo {
     int allTime = 0;
     int hours = 10;
     int minutes = 0;
+    int endHour = 10;
+    int endMinutes = 0;
+
+
     for (int i = 0; i < speachTime.Length; i++) {
-      allTime += speachTime[i];
-      minutes += speachTime[i];
-      //Console.WriteLine(elapsedTime);
-      Console.WriteLine(string.Format("{0:00}さんのお話は{1:00}時{2:00}分まで: ", i,hours, minutes));
+      string[] speaker = new string [speachTime.Length];
+      for (int j = 0; j < speachTime.Length; j++) {
+        speaker[j] = Console.ReadLine();
+
+        allTime += speachTime[i];
+        endMinutes += speachTime[i];
+
+        if ( endMinutes >= 60) {
+          endMinutes = endMinutes - 60;
+          endHour++;
+        }
+        if ( hours >= 12) {
+          hours++;
+          minutes = endMinutes -= 10;
+        }
+
+        //Console.WriteLine(elapsedTime);
+        Console.WriteLine(string.Format(speaker[j],"{0:00}さんのお話は{1:00}時{2:00}分から{3:00}時{4:00}分まで: ", i,　hours,　minutes, endHour, endMinutes));
+
+        hours = endHour;
+        minutes = endMinutes += 10;
+
+
+
+
+      }
+
+
+
 
     }
     return allTime;
@@ -28,6 +57,7 @@ class Demo {
     Console.WriteLine(result);
   }
 }
+
 /*
 
 class Demo {

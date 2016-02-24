@@ -4,7 +4,7 @@ using System;
 
 public class RepeatN {
   static void Main() {
-    Console.WriteLine("数字を入れてください");
+    Console.WriteLine(	"数字を入れてください");
     var input = int.Parse(Console.ReadLine());
     string kome = "";
 
