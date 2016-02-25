@@ -11,8 +11,6 @@ public class RepeatN {
     for (int i = 0; i < input; i = i + 1) {
       kome += "*";
       Console.WriteLine(kome);
-
-      //Console.WriteLine(new String('*',i));
       }
     }
   }

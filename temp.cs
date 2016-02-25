@@ -26,6 +26,11 @@ class Demo {
         minutes = endMinutes -= 10;
       }
 
+      string[] name = new string[speachTime.Length];
+      Console.WriteLine("name");
+      name[i] = Console.ReadLine();
+      string who = name[i];
+
       //Console.WriteLine(elapsedTime);
       Console.WriteLine(string.Format("{0:00}さんのお話は{1:00}時{2:00}分から{3:00}時{4:00}分まで: ", i,　hours,　minutes, endHour, endMinutes));
 
