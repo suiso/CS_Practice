@@ -7,11 +7,11 @@ public class Animal {
 
 
   public virtual string WhatEat() {
-    esa = "...";
+    esa = "";
     return esa;
   }
   public virtual string HowToVoice() {
-    voice = "...";
+    voice = "";
     return voice;
   }
 }
